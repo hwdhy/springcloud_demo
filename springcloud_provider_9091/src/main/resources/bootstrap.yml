@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:10086/
+      name: myapplication
+      profile: provide2
+      label: master
+
+  rabbitmq:
+    host: 192.168.46.128
+    port: 5672
+    username: root
+    password: root
+    virtual-host: /java
+management:
+  endpoint:
+    bus-refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: ['*']

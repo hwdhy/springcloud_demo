@@ -1,0 +1,20 @@
+server:
+  port: 8080
+eureka:
+  #服务注册中心本身又是一个服务
+  client:
+    #表示服务注册中心的地址
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka8081.com:8081/eureka/
+    #是否注册到注册中心上
+    register-with-eureka: false
+    #获取注册中心上的服务
+    fetch-registry: false
+  instance:
+    #服务的主机名
+    hostname: eureka8081
+
+spring:
+  application:
+    name: eureka_server
